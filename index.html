@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANDEXOR — Agencia de Inteligencia Artificial | Ilo, Perú</title>
+  <meta name="description" content="ANDEXOR es una agencia de inteligencia artificial en Ilo, Perú. Especializados en desarrollo frontend, backend y auditorías digitales con IA aplicada.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- NAVBAR compartida -->
+  <header id="navbar">
+    <nav class="nav-container container" aria-label="Navegación principal">
+      <button class="nav-logo" onclick="showPage('home')" aria-label="ANDEXOR — inicio" style="background:none;border:none;cursor:pointer;padding:0;">
+        <img src="andexor.jpg" alt="ANDEXOR" class="logo-img">
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#contacto" class="btn-nav">Cotizar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================================================ -->
+  <!-- PÁGINA: HOME                                      -->
+  <!-- ================================================ -->
+  <div id="page-home" class="page">
+    <main>
+
+      <!-- Hero -->
+      <section id="hero" class="section-hero">
+        <div class="container hero-content">
+          <span class="hero-tag reveal">Agencia de Inteligencia Artificial &middot; Ilo, Perú</span>
+          <h1 class="hero-title reveal">Impulsamos tu negocio<br><span class="text-gold">con tecnología real</span></h1>
+          <p class="hero-sub reveal">Desarrollamos frontends, backends y realizamos auditorías digitales con IA aplicada. Soluciones que generan resultados medibles.</p>
+          <div class="hero-cta reveal">
+            <a href="#contacto" class="btn btn-primary">Agenda una consulta</a>
+            <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+          </div>
+          <div class="hero-stats reveal">
+            <div class="stat">
+              <span class="stat-number" data-count="12">0</span>
+              <span class="stat-label">Proyectos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number" data-count="8">0</span>
+              <span class="stat-label">Clientes</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number" data-count="3">0</span>
+              <span class="stat-label">Servicios</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll-indicator" aria-hidden="true"><span></span></div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Lo que hacemos</span>
+            <h2 class="section-title">Servicios diseñados<br>para escalar</h2>
+            <p class="section-desc">Cada solución está pensada para que tu negocio tenga presencia digital sólida, sistemas que funcionan y datos que informan decisiones.</p>
+          </div>
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M16 44h16M24 36v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M14 26l5-5 5 5 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="service-number">01</span>
+              <h3>Desarrollo Frontend</h3>
+              <p>Interfaces modernas, responsivas y de alto rendimiento. UI/UX optimizados para conversión con animaciones y microinteracciones que destacan tu marca.</p>
+              <ul class="service-list">
+                <li>Landing pages premium</li>
+                <li>Aplicaciones web progresivas</li>
+                <li>Dashboards interactivos</li>
+                <li>Diseño UI/UX profesional</li>
+              </ul>
+              <button class="service-link" onclick="showPage('frontend')">Ver más <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="service-card service-card--featured reveal">
+              <div class="service-badge">Más solicitado</div>
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="12" rx="16" ry="6" stroke="currentColor" stroke-width="2.5"/><path d="M8 12v10c0 3.314 7.163 6 16 6s16-2.686 16-6V12" stroke="currentColor" stroke-width="2.5"/><path d="M8 22v10c0 3.314 7.163 6 16 6s16-2.686 16-6V22" stroke="currentColor" stroke-width="2.5"/></svg>
+              </div>
+              <span class="service-number">02</span>
+              <h3>Desarrollo Backend</h3>
+              <p>Arquitecturas robustas, APIs escalables y bases de datos optimizadas. Sistemas que soportan el crecimiento de tu negocio sin fallos ni cuellos de botella.</p>
+              <ul class="service-list">
+                <li>APIs REST y GraphQL</li>
+                <li>Bases de datos relacionales y NoSQL</li>
+                <li>Autenticación y seguridad</li>
+                <li>Integraciones con servicios externos</li>
+              </ul>
+              <button class="service-link" onclick="showPage('backend')">Ver más <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="22" r="14" stroke="currentColor" stroke-width="2.5"/><path d="M24 10v12l7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M10 8l4 4M38 8l-4 4M10 36l4-4M38 36l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg>
+              </div>
+              <span class="service-number">03</span>
+              <h3>Auditorías Digitales</h3>
+              <p>Diagnóstico completo de tu presencia digital. Identificamos problemas de rendimiento, SEO, seguridad y accesibilidad antes de que afecten a tu negocio.</p>
+              <ul class="service-list">
+                <li>Rendimiento web (Core Web Vitals)</li>
+                <li>SEO técnico y on-page</li>
+                <li>Seguridad y vulnerabilidades</li>
+                <li>Accesibilidad WCAG</li>
+              </ul>
+              <button class="service-link" onclick="showPage('auditoria')">Ver más <span aria-hidden="true">→</span></button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beneficios -->
+      <section id="beneficios" class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Por qué ANDEXOR</span>
+            <h2 class="section-title">Tecnología aplicada.<br>Resultados reales.</h2>
+          </div>
+          <div class="benefits-grid">
+            <div class="benefit-item reveal"><div class="benefit-icon">⚡</div><h4>Entrega rápida</h4><p>Plazos definidos y cumplidos. Sin retrasos que paralicen tu operación.</p></div>
+            <div class="benefit-item reveal"><div class="benefit-icon">🎯</div><h4>Orientado a resultados</h4><p>Cada decisión técnica está respaldada por métricas de negocio.</p></div>
+            <div class="benefit-item reveal"><div class="benefit-icon">🤖</div><h4>IA integrada</h4><p>Incorporamos inteligencia artificial donde genera valor real, no solo como moda.</p></div>
+            <div class="benefit-item reveal"><div class="benefit-icon">🛡️</div><h4>Soporte continuo</h4><p>No desaparecemos después de la entrega. Acompañamos el crecimiento.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estadísticas -->
+      <section id="estadisticas" class="section section-stats">
+        <div class="container">
+          <div class="stats-grid reveal">
+            <div class="stat-card"><span class="stat-big" data-count="12">0</span><span class="stat-unit">+</span><p>Proyectos completados</p></div>
+            <div class="stat-card"><span class="stat-big" data-count="100">0</span><span class="stat-unit">%</span><p>Proyectos entregados a tiempo</p></div>
+            <div class="stat-card"><span class="stat-big" data-count="3">0</span><span class="stat-unit">x</span><p>Mejora promedio en rendimiento</p></div>
+            <div class="stat-card"><span class="stat-big" data-count="8">0</span><span class="stat-unit">+</span><p>Tecnologías dominadas</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portafolio -->
+      <section id="portafolio" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Nuestro trabajo</span>
+            <h2 class="section-title">Proyectos que<br>hablan por sí solos</h2>
+          </div>
+          <div class="portfolio-grid">
+            <article class="portfolio-card reveal">
+              <div class="portfolio-img"><div class="portfolio-placeholder portfolio-placeholder--1">Frontend</div></div>
+              <div class="portfolio-info"><span class="portfolio-tag">Desarrollo Frontend</span><h4>Landing Page Premium</h4><p>Diseño 3D interactivo con Three.js y animaciones avanzadas para empresa local en Ilo.</p></div>
+            </article>
+            <article class="portfolio-card reveal">
+              <div class="portfolio-img"><div class="portfolio-placeholder portfolio-placeholder--2">Backend</div></div>
+              <div class="portfolio-info"><span class="portfolio-tag">Desarrollo Backend</span><h4>API REST Escalable</h4><p>Arquitectura con autenticación JWT y base de datos optimizada para plataforma de gestión.</p></div>
+            </article>
+            <article class="portfolio-card reveal">
+              <div class="portfolio-img"><div class="portfolio-placeholder portfolio-placeholder--3">Auditoría</div></div>
+              <div class="portfolio-info"><span class="portfolio-tag">Auditoría Digital</span><h4>Diagnóstico Web Completo</h4><p>Mejora del 280% en Core Web Vitals y recuperación de posiciones SEO en 3 semanas.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section id="testimonios" class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Clientes</span>
+            <h2 class="section-title">Lo que dicen quienes<br>trabajan con nosotros</h2>
+          </div>
+          <div class="testimonials-grid">
+            <blockquote class="testimonial-card reveal">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>"ANDEXOR transformó la presencia digital de mi negocio. La landing que crearon genera consultas todos los días. Profesionales de verdad."</p>
+              <footer><div class="testimonial-avatar">M</div><div><strong>María C.</strong><span>Emprendedora, Ilo</span></div></footer>
+            </blockquote>
+            <blockquote class="testimonial-card reveal">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>"La auditoría fue reveladora. Descubrieron problemas que no sabía que tenía. Mi sitio carga 3 veces más rápido y el SEO mejoró en semanas."</p>
+              <footer><div class="testimonial-avatar">R</div><div><strong>Roberto M.</strong><span>Dueño de tienda online</span></div></footer>
+            </blockquote>
+            <blockquote class="testimonial-card reveal">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>"El backend que desarrollaron para mi app maneja todo el tráfico sin problemas. Nunca pensé que tendría una API tan sólida a este precio."</p>
+              <footer><div class="testimonial-avatar">C</div><div><strong>Carlos V.</strong><span>Fundador de startup</span></div></footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proceso -->
+      <section id="proceso" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Metodología</span>
+            <h2 class="section-title">Cómo trabajamos<br>contigo</h2>
+          </div>
+          <div class="process-steps">
+            <div class="process-step reveal"><div class="step-number">01</div><div class="step-content"><h4>Diagnóstico inicial</h4><p>Entendemos tu negocio, objetivos y desafíos técnicos actuales en una sesión de descubrimiento sin costo.</p></div></div>
+            <div class="process-step reveal"><div class="step-number">02</div><div class="step-content"><h4>Propuesta técnica</h4><p>Diseñamos la arquitectura y el alcance del proyecto con fechas y entregables claros. Sin sorpresas.</p></div></div>
+            <div class="process-step reveal"><div class="step-number">03</div><div class="step-content"><h4>Desarrollo iterativo</h4><p>Construimos por fases con revisiones periódicas para asegurar que el resultado sea exactamente lo que necesitas.</p></div></div>
+            <div class="process-step reveal"><div class="step-number">04</div><div class="step-content"><h4>Entrega y soporte</h4><p>Lanzamos, documentamos y brindamos soporte post-entrega para que todo funcione desde el día uno.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA intermedio -->
+      <section class="section-cta-mid">
+        <div class="container reveal">
+          <h2>¿Listo para dar el siguiente paso?</h2>
+          <p>Cuéntanos tu proyecto y en 24 horas tienes una propuesta.</p>
+          <a href="#contacto" class="btn btn-primary btn-large">Hablar con el equipo</a>
+        </div>
+      </section>
+
+      <!-- Planes -->
+      <section id="planes" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Inversión</span>
+            <h2 class="section-title">Planes pensados para<br>cada etapa de tu negocio</h2>
+            <p class="section-desc">Todos los planes incluyen comunicación directa, sin intermediarios.</p>
+          </div>
+          <div class="plans-grid">
+            <div class="plan-card reveal">
+              <div class="plan-header">
+                <h3>Starter</h3>
+                <div class="plan-price"><span class="plan-currency">$</span><span class="plan-amount">100</span></div>
+                <p class="plan-period">Pago único</p>
+              </div>
+              <ul class="plan-features">
+                <li>Landing page profesional</li>
+                <li>Diseño responsive</li>
+                <li>Formulario de contacto</li>
+                <li>Optimización básica SEO</li>
+                <li>1 revisión incluida</li>
+              </ul>
+              <a href="#contacto" class="btn btn-ghost btn-block">Empezar</a>
+            </div>
+            <div class="plan-card plan-card--featured reveal">
+              <div class="plan-badge">Recomendado</div>
+              <div class="plan-header">
+                <h3>Profesional</h3>
+                <div class="plan-price"><span class="plan-currency">$</span><span class="plan-amount">250</span></div>
+                <p class="plan-period">Pago único</p>
+              </div>
+              <ul class="plan-features">
+                <li>Todo lo del plan Starter</li>
+                <li>Backend con API REST</li>
+                <li>Panel de administración</li>
+                <li>Integración con pagos</li>
+                <li>3 revisiones incluidas</li>
+                <li>Soporte 30 días</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary btn-block">Empezar</a>
+            </div>
+            <div class="plan-card reveal">
+              <div class="plan-header">
+                <h3>Auditoría</h3>
+                <div class="plan-price"><span class="plan-currency">$</span><span class="plan-amount">150</span></div>
+                <p class="plan-period">Pago único</p>
+              </div>
+              <ul class="plan-features">
+                <li>Análisis de rendimiento</li>
+                <li>Revisión SEO técnico</li>
+                <li>Diagnóstico de seguridad</li>
+                <li>Reporte con prioridades</li>
+                <li>Plan de mejoras</li>
+              </ul>
+              <a href="#contacto" class="btn btn-ghost btn-block">Empezar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Preguntas frecuentes</span>
+            <h2 class="section-title">Respuestas directas</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item reveal"><summary>¿Cuánto tiempo toma un proyecto frontend?</summary><div class="faq-body"><p>Una landing page profesional toma entre 5 y 10 días hábiles. Una aplicación web completa puede tomar de 3 a 8 semanas. Siempre definimos plazos exactos antes de empezar.</p></div></details>
+            <details class="faq-item reveal"><summary>¿Trabajan solo en Ilo o con clientes de toda la región?</summary><div class="faq-body"><p>Trabajamos con clientes de todo Perú y Latinoamérica de forma remota. Nos comunicamos por videollamada, WhatsApp o correo según tu preferencia.</p></div></details>
+            <details class="faq-item reveal"><summary>¿Qué incluye la auditoría digital?</summary><div class="faq-body"><p>Analizamos rendimiento (Core Web Vitals), SEO técnico, seguridad básica y accesibilidad. Entregamos un reporte con prioridades y plan de acción.</p></div></details>
+            <details class="faq-item reveal"><summary>¿Usan inteligencia artificial en el desarrollo?</summary><div class="faq-body"><p>Sí. Usamos IA para acelerar el desarrollo, mejorar la calidad del código y detectar problemas antes. También podemos integrar funcionalidades de IA en tu producto.</p></div></details>
+            <details class="faq-item reveal"><summary>¿Cuáles son las formas de pago?</summary><div class="faq-body"><p>Aceptamos transferencias bancarias, Yape, Plin y efectivo. Trabajamos con un pago inicial del 50% y el resto al finalizar.</p></div></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto" class="section">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-info reveal">
+              <span class="section-tag">Contacto</span>
+              <h2>Cuéntanos<br>tu proyecto</h2>
+              <p>Respondemos en menos de 24 horas. Sin compromisos, sin presión.</p>
+              <div class="contact-details">
+                <a href="https://wa.me/51999999999" class="contact-item" target="_blank" rel="noopener noreferrer"><div><strong>WhatsApp</strong><span>+51999999999</span></div></a>
+                <a href="mailto:nannoxtechnology@gmail.com" class="contact-item"><div class="contact-icon">✉️</div><div><strong>Email</strong><span>nannoxtechnology@gmail.com</span></div></a>
+                <div class="contact-item"><div class="contact-icon">📍</div><div><strong>Ubicación</strong><span>Perú</span></div></div>
+              </div>
+            </div>
+            <form id="contact-form" class="contact-form reveal" novalidate>
+              <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required autocomplete="name"></div>
+              <div class="form-group"><label for="email">Correo electrónico</label><input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required autocomplete="email"></div>
+              <div class="form-group">
+                <label for="servicio">Servicio de interés</label>
+                <select id="servicio" name="servicio" required>
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="frontend">Desarrollo Frontend</option>
+                  <option value="backend">Desarrollo Backend</option>
+                  <option value="auditoria">Auditoría Digital</option>
+                  <option value="completo">Proyecto completo</option>
+                </select>
+              </div>
+              <div class="form-group"><label for="mensaje">Cuéntanos tu proyecto</label><textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente lo que necesitas..." required></textarea></div>
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Enviar mensaje</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA final -->
+      <section class="section-cta-final">
+        <div class="container reveal">
+          <div class="cta-final-content">
+            <img src="andexor.jpg" alt="ANDEXOR" class="cta-logo" loading="lazy">
+            <h2>Tu negocio merece tecnología que funciona</h2>
+            <p>Más de 12 proyectos entregados. Clientes en toda la región sur del Perú.</p>
+            <a href="#contacto" class="btn btn-primary btn-large">Empezar ahora</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div><!-- fin #page-home -->
+
+
+  <!-- ================================================ -->
+  <!-- PÁGINA: FRONTEND                                  -->
+  <!-- ================================================ -->
+  <div id="page-frontend" class="page">
+    <main>
+      <section class="detail-hero">
+        <div class="container">
+          <button class="back-link reveal" onclick="showPage('home')">← Volver al inicio</button>
+          <div class="detail-hero-badge reveal">Servicio 01</div>
+          <h1 class="reveal">Desarrollo<br><span class="text-gold">Frontend</span></h1>
+          <p class="reveal">Creamos interfaces que convierten visitantes en clientes. Cada pixel tiene un propósito: rapidez, claridad y una experiencia que tu usuario no olvida.</p>
+          <div class="reveal"><a href="#contacto" class="btn btn-primary btn-large" onclick="showPage('home')">Cotizar mi proyecto</a></div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Qué incluye</span>
+            <h2 class="section-title">Todo lo que necesitas<br>en un solo servicio</h2>
+          </div>
+          <div class="included-grid">
+            <div class="included-card reveal"><div class="included-icon">🎨</div><h4>Diseño UI/UX profesional</h4><p>Interfaces diseñadas con jerarquía visual clara, paleta de colores coherente con tu marca y componentes modernos. No usamos plantillas genéricas — cada diseño es único.</p></div>
+            <div class="included-card reveal"><div class="included-icon">📱</div><h4>Responsive real</h4><p>Tu sitio se ve perfecto en celular, tablet y desktop. No es un "zoom out" — es un diseño pensado para cada dispositivo con breakpoints y grids fluidos.</p></div>
+            <div class="included-card reveal"><div class="included-icon">⚡</div><h4>Rendimiento optimizado</h4><p>Código limpio, imágenes comprimidas, lazy loading y cero dependencias innecesarias. Puntuación alta en Core Web Vitals desde el primer día.</p></div>
+            <div class="included-card reveal"><div class="included-icon">✨</div><h4>Animaciones y microinteracciones</h4><p>Transiciones fluidas, efectos de scroll reveal, hovers premium y feedback visual que hacen que tu marca se sienta moderna y profesional.</p></div>
+            <div class="included-card reveal"><div class="included-icon">🤖</div><h4>IA integrada (opcional)</h4><p>Chats asistidos por IA, recomendaciones personalizadas, análisis de comportamiento del usuario. Tecnología real, no solo decorativa.</p></div>
+            <div class="included-card reveal"><div class="included-icon">🔧</div><h4>Formularios y validaciones</h4><p>Formularios de contacto, cotización, registro o suscripción con validación en tiempo real, mensajes de confirmación y protección anti-spam.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Tecnologías</span><h2 class="section-title">Stack que usamos</h2></div>
+          <div class="tech-grid reveal">
+            <span class="tech-tag">HTML5 semántico</span><span class="tech-tag">CSS3 moderno</span><span class="tech-tag">JavaScript ES2024</span><span class="tech-tag">Three.js</span><span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag teal">Tailwind CSS</span><span class="tech-tag teal">Figma</span><span class="tech-tag teal">GSAP</span><span class="tech-tag teal">Framer Motion</span><span class="tech-tag">Astro</span><span class="tech-tag">TypeScript</span><span class="tech-tag teal">Vercel / Netlify</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Beneficios concretos</span><h2 class="section-title">Por qué importa<br>un frontend bien hecho</h2></div>
+          <div class="benefits-list">
+            <div class="benefit-row reveal"><div class="benefit-num">01</div><div><h5>Primera impresión que convierte</h5><p>El 75% de los usuarios juzga la credibilidad de un negocio por su diseño web. Un frontend profesional genera confianza antes de que lean una sola palabra.</p></div></div>
+            <div class="benefit-row reveal"><div class="benefit-num">02</div><div><h5>Velocidad que retiene usuarios</h5><p>Cada segundo de carga que eliminas reduce el abandono en un 7%. Un sitio rápido no solo se siente mejor — genera más ventas directamente.</p></div></div>
+            <div class="benefit-row reveal"><div class="benefit-num">03</div><div><h5>SEO técnico desde la base</h5><p>HTML semántico, meta tags correctas y estructura de headings pensada para Google. Tu inversión en frontend también trabaja para el posicionamiento orgánico.</p></div></div>
+            <div class="benefit-row reveal"><div class="benefit-num">04</div><div><h5>Diferenciación real frente a tu competencia</h5><p>En Ilo y la región sur, la mayoría de negocios tiene presencias digitales básicas. Un frontend premium te posiciona como la opción seria del mercado.</p></div></div>
+            <div class="benefit-row reveal"><div class="benefit-num">05</div><div><h5>Escalable y mantenible</h5><p>Código modular y limpio que puede crecer contigo. Agregar secciones o integrar nuevas funcionalidades no requiere empezar desde cero.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-box reveal">
+            <h2>¿Tienes un proyecto frontend en mente?</h2>
+            <p>Cuéntanos qué necesitas y en 24 horas tienes una propuesta con tiempo y costo exactos.</p>
+            <div class="cta-box-btns">
+              <button class="btn btn-primary btn-large" onclick="showPage('home'); setTimeout(()=>document.getElementById('contacto').scrollIntoView({behavior:'smooth'}),120)">Iniciar mi proyecto</button>
+              <button class="btn btn-ghost" onclick="showPage('home')">Ver otros servicios</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div><!-- fin #page-frontend -->
+
+
+  <!-- ================================================ -->
+  <!-- PÁGINA: BACKEND                                   -->
+  <!-- ================================================ -->
+  <div id="page-backend" class="page">
+    <main>
+      <section class="detail-hero">
+        <div class="container">
+          <button class="back-link reveal" onclick="showPage('home')">← Volver al inicio</button>
+          <div class="detail-hero-badge badge-teal reveal">Servicio 02</div>
+          <h1 class="reveal">Desarrollo<br><span class="text-teal">Backend</span></h1>
+          <p class="reveal">La infraestructura que sostiene tu negocio digital. Construimos el motor que hace que todo funcione: APIs rápidas, bases de datos sólidas y seguridad robusta desde el día uno.</p>
+          <div class="reveal"><button class="btn btn-primary btn-large" onclick="showPage('home'); setTimeout(()=>document.getElementById('contacto').scrollIntoView({behavior:'smooth'}),120)">Cotizar mi proyecto</button></div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Qué incluye</span><h2 class="section-title">Infraestructura completa<br>para tu producto digital</h2></div>
+          <div class="included-grid">
+            <div class="included-card reveal"><div class="included-icon">🔌</div><h4>APIs REST y GraphQL</h4><p>Endpoints bien diseñados, documentados y con versionado. Tu frontend o aplicación móvil tendrá una API confiable, rápida y fácil de integrar.</p></div>
+            <div class="included-card reveal"><div class="included-icon">🗄️</div><h4>Bases de datos optimizadas</h4><p>Diseño de esquemas relacionales (PostgreSQL, MySQL) y NoSQL (MongoDB, Redis). Índices correctos, consultas optimizadas y backups automáticos.</p></div>
+            <div class="included-card reveal"><div class="included-icon">🔐</div><h4>Autenticación y autorización</h4><p>JWT, OAuth2, sesiones seguras y control de roles. Tu plataforma tendrá un sistema de acceso sólido que protege los datos de tus usuarios.</p></div>
+            <div class="included-card reveal"><div class="included-icon">🔗</div><h4>Integraciones externas</h4><p>Pasarelas de pago (Stripe, Culqi), servicios de correo (SendGrid), almacenamiento cloud (Cloudinary, S3) y cualquier API de terceros que necesites.</p></div>
+            <div class="included-card reveal"><div class="included-icon">🤖</div><h4>IA en el backend</h4><p>Integración con APIs de inteligencia artificial para análisis de datos, generación de contenido, clasificación automática o recomendaciones personalizadas.</p></div>
+            <div class="included-card reveal"><div class="included-icon">🚀</div><h4>Deploy y DevOps básico</h4><p>Configuración de entornos de producción en Railway, Render o AWS. Variables de entorno, CI/CD básico y monitoreo para que tu backend esté siempre en línea.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Arquitectura</span><h2 class="section-title">Cómo estructuramos<br>tu sistema</h2></div>
+          <div class="arch-diagram reveal">
+            <div class="arch-layers">
+              <div class="arch-layer"><span class="arch-layer-label">Cliente</span><div class="arch-layer-items"><span class="arch-item gold">Web App</span><span class="arch-item gold">App Móvil</span><span class="arch-item gold">Panel Admin</span></div></div>
+              <div class="arch-arrow">↕</div>
+              <div class="arch-layer"><span class="arch-layer-label">API Layer</span><div class="arch-layer-items"><span class="arch-item teal">REST API</span><span class="arch-item teal">Auth JWT</span><span class="arch-item teal">Rate Limiting</span><span class="arch-item teal">Validaciones</span></div></div>
+              <div class="arch-arrow">↕</div>
+              <div class="arch-layer"><span class="arch-layer-label">Lógica</span><div class="arch-layer-items"><span class="arch-item white">Controladores</span><span class="arch-item white">Servicios</span><span class="arch-item white">Middlewares</span><span class="arch-item gold">IA / Automatizaciones</span></div></div>
+              <div class="arch-arrow">↕</div>
+              <div class="arch-layer"><span class="arch-layer-label">Datos</span><div class="arch-layer-items"><span class="arch-item teal">PostgreSQL / MySQL</span><span class="arch-item teal">MongoDB</span><span class="arch-item white">Redis (caché)</span><span class="arch-item white">Cloud Storage</span></div></div>
+              <div class="arch-arrow">↕</div>
+              <div class="arch-layer"><span class="arch-layer-label">Infra</span><div class="arch-layer-items"><span class="arch-item gold">Railway / AWS</span><span class="arch-item gold">CI/CD</span><span class="arch-item white">SSL / HTTPS</span><span class="arch-item white">Backups automáticos</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Tecnologías</span><h2 class="section-title">Stack que dominamos</h2></div>
+          <div class="tech-grid reveal">
+            <span class="tech-tag">Node.js</span><span class="tech-tag">Python</span><span class="tech-tag">Express.js</span><span class="tech-tag">FastAPI</span><span class="tech-tag teal">PostgreSQL</span><span class="tech-tag teal">MongoDB</span><span class="tech-tag teal">Redis</span><span class="tech-tag">JWT / OAuth2</span><span class="tech-tag">Stripe / Culqi</span><span class="tech-tag teal">Cloudinary</span><span class="tech-tag teal">SendGrid</span><span class="tech-tag">Railway</span><span class="tech-tag">AWS S3</span><span class="tech-tag teal">Docker</span><span class="tech-tag">Claude API</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Beneficios concretos</span><h2 class="section-title">Por qué invertir en<br>un backend sólido</h2></div>
+          <div class="benefits-list">
+            <div class="benefit-row teal-hover reveal"><div class="benefit-num teal">01</div><div><h5>Escalabilidad sin límite</h5><p>Un backend bien diseñado soporta 10 usuarios o 10,000 sin cambiar la arquitectura. Crecer no significa reescribir todo desde cero.</p></div></div>
+            <div class="benefit-row teal-hover reveal"><div class="benefit-num teal">02</div><div><h5>Datos seguros, negocio protegido</h5><p>Autenticación robusta, encriptación de contraseñas, protección contra SQL injection y XSS. Los datos de tus clientes son tu activo más valioso.</p></div></div>
+            <div class="benefit-row teal-hover reveal"><div class="benefit-num teal">03</div><div><h5>Automatización de procesos</h5><p>Emails automáticos, notificaciones push, procesamiento de pagos, reportes programados. Tu negocio trabaja 24/7 sin intervención manual.</p></div></div>
+            <div class="benefit-row teal-hover reveal"><div class="benefit-num teal">04</div><div><h5>Decisiones basadas en datos reales</h5><p>Con una base de datos bien estructurada puedes responder preguntas de negocio en segundos: qué vende más, cuándo pasa qué.</p></div></div>
+            <div class="benefit-row teal-hover reveal"><div class="benefit-num teal">05</div><div><h5>Integración con cualquier herramienta</h5><p>Una API bien construida conecta tu sistema con pagos, CRM, apps móviles, marketplaces o cualquier plataforma hoy o mañana.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-box cta-teal reveal">
+            <h2>¿Tu negocio necesita un backend robusto?</h2>
+            <p>Cuéntanos qué sistema necesitas construir. Sin compromisos, te damos una evaluación técnica gratuita.</p>
+            <div class="cta-box-btns">
+              <button class="btn btn-primary btn-large" onclick="showPage('home'); setTimeout(()=>document.getElementById('contacto').scrollIntoView({behavior:'smooth'}),120)">Iniciar mi proyecto</button>
+              <button class="btn btn-ghost" onclick="showPage('home')">Ver otros servicios</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div><!-- fin #page-backend -->
+
+
+  <!-- ================================================ -->
+  <!-- PÁGINA: AUDITORÍA                                 -->
+  <!-- ================================================ -->
+  <div id="page-auditoria" class="page">
+    <main>
+      <section class="detail-hero">
+        <div class="container">
+          <button class="back-link reveal" onclick="showPage('home')">← Volver al inicio</button>
+          <div class="detail-hero-badge badge-purple reveal">Servicio 03</div>
+          <h1 class="reveal">Auditorías<br><span class="text-purple">Digitales</span></h1>
+          <p class="reveal">Sabemos exactamente qué está frenando tu sitio web. Analizamos cada capa — velocidad, visibilidad, seguridad y accesibilidad — y te entregamos un plan de acción claro con prioridades reales.</p>
+          <div class="reveal"><button class="btn btn-primary btn-large" onclick="showPage('home'); setTimeout(()=>document.getElementById('contacto').scrollIntoView({behavior:'smooth'}),120)">Solicitar auditoría</button></div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Qué analizamos</span><h2 class="section-title">4 áreas críticas que<br>impactan tu negocio</h2></div>
+          <div class="audit-areas">
+            <div class="audit-area audit-area--perf reveal">
+              <span class="audit-score score-gold">Rendimiento</span>
+              <div class="audit-icon">⚡</div>
+              <h4>Rendimiento Web</h4>
+              <p>Medimos y diagnosticamos la velocidad real de tu sitio con las mismas herramientas que usa Google para rankear.</p>
+              <ul class="audit-checklist"><li>Largest Contentful Paint (LCP)</li><li>First Input Delay (FID)</li><li>Cumulative Layout Shift (CLS)</li><li>Time to First Byte (TTFB)</li><li>Optimización de imágenes y fuentes</li><li>Análisis de scripts bloqueantes</li></ul>
+            </div>
+            <div class="audit-area audit-area--seo reveal">
+              <span class="audit-score score-teal">SEO</span>
+              <div class="audit-icon">🔍</div>
+              <h4>SEO Técnico y On-Page</h4>
+              <p>Revisamos todo lo que afecta tu visibilidad en Google: desde el código hasta la estructura de contenido.</p>
+              <ul class="audit-checklist"><li>Meta tags y estructura de headings</li><li>Sitemap XML y robots.txt</li><li>URLs canónicas y redirects</li><li>Datos estructurados (Schema.org)</li><li>Indexabilidad y rastreo</li><li>Análisis de palabras clave actuales</li></ul>
+            </div>
+            <div class="audit-area audit-area--sec reveal">
+              <span class="audit-score score-red">Seguridad</span>
+              <div class="audit-icon">🛡️</div>
+              <h4>Seguridad Básica</h4>
+              <p>Identificamos vulnerabilidades que exponen tus datos o los de tus usuarios antes de que alguien más las encuentre.</p>
+              <ul class="audit-checklist"><li>Headers HTTP de seguridad</li><li>Certificado SSL y configuración HTTPS</li><li>Vulnerabilidades comunes (XSS, CSRF)</li><li>Dependencias desactualizadas</li><li>Exposición de datos sensibles</li><li>Configuración de CORS</li></ul>
+            </div>
+            <div class="audit-area audit-area--acc reveal">
+              <span class="audit-score score-purple">Accesibilidad</span>
+              <div class="audit-icon">♿</div>
+              <h4>Accesibilidad WCAG</h4>
+              <p>Evaluamos qué tan inclusivo es tu sitio para personas con discapacidades visuales, motoras o cognitivas.</p>
+              <ul class="audit-checklist"><li>Contraste de colores (WCAG 2.1)</li><li>Navegación por teclado</li><li>Textos alternativos en imágenes</li><li>Etiquetas ARIA correctas</li><li>Estructura semántica</li><li>Compatibilidad con lectores de pantalla</li></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">El reporte</span><h2 class="section-title">Así se ve lo que<br>te entregamos</h2><p class="section-desc">Un reporte ejecutivo con puntuación por área, hallazgos críticos y plan de acción ordenado por impacto.</p></div>
+          <div class="report-preview reveal">
+            <div class="report-header"><div class="report-dot"></div><span class="report-title">ANDEXOR — Reporte de Auditoría Digital</span></div>
+            <div class="report-items">
+              <div class="report-item"><span class="report-label">⚡ Rendimiento</span><div class="report-bar-wrap"><div class="report-bar bar-gold"></div></div><span class="report-val" style="color:var(--gold-primary)">42</span></div>
+              <div class="report-item"><span class="report-label">🔍 SEO Técnico</span><div class="report-bar-wrap"><div class="report-bar bar-teal"></div></div><span class="report-val" style="color:var(--teal-primary)">68</span></div>
+              <div class="report-item"><span class="report-label">🛡️ Seguridad</span><div class="report-bar-wrap"><div class="report-bar bar-red"></div></div><span class="report-val" style="color:#e05050">35</span></div>
+              <div class="report-item"><span class="report-label">♿ Accesibilidad</span><div class="report-bar-wrap"><div class="report-bar bar-purple"></div></div><span class="report-val" style="color:#a080e8">55</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Cómo funciona</span><h2 class="section-title">Proceso en<br>4 pasos simples</h2></div>
+          <div class="process-timeline">
+            <div class="timeline-item reveal"><div class="timeline-num">01</div><div class="timeline-content"><h5>Nos compartes el acceso</h5><p>Solo necesitamos la URL de tu sitio y, si aplica, acceso de lectura. Sin necesidad de credenciales de servidor.</p></div></div>
+            <div class="timeline-item reveal"><div class="timeline-num">02</div><div class="timeline-content"><h5>Análisis técnico completo</h5><p>Usamos herramientas profesionales y revisión manual para las 4 áreas. El proceso toma entre 24 y 48 horas.</p></div></div>
+            <div class="timeline-item reveal"><div class="timeline-num">03</div><div class="timeline-content"><h5>Reporte con prioridades</h5><p>Te entregamos un documento claro con hallazgos críticos, medios y bajos, ordenados por impacto en tu negocio.</p></div></div>
+            <div class="timeline-item reveal"><div class="timeline-num">04</div><div class="timeline-content"><h5>Sesión de revisión (30 min)</h5><p>Revisamos el reporte contigo y te explicamos exactamente qué debe hacerse primero para obtener el mayor impacto.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal"><span class="section-tag">Por qué importa</span><h2 class="section-title">Lo que descubres con<br>una auditoría bien hecha</h2></div>
+          <div class="benefits-list">
+            <div class="benefit-row purple-hover reveal"><div class="benefit-num purple">01</div><div><h5>Sabes por qué no te encuentran en Google</h5><p>El 90% de los sitios tiene problemas técnicos de SEO que frenan su posicionamiento. La auditoría los identifica con precisión: qué arreglar, en qué orden y qué impacto esperar.</p></div></div>
+            <div class="benefit-row purple-hover reveal"><div class="benefit-num purple">02</div><div><h5>Descubres por qué los usuarios se van sin comprar</h5><p>Un sitio lento o con errores de usabilidad aumenta el abandono. Cada punto de mejora en rendimiento puede representar un incremento directo en conversiones.</p></div></div>
+            <div class="benefit-row purple-hover reveal"><div class="benefit-num purple">03</div><div><h5>Proteges los datos antes de que haya un incidente</h5><p>Las vulnerabilidades básicas son las más fáciles de explotar y las más fáciles de prevenir. La auditoría las encuentra antes de que alguien más lo haga.</p></div></div>
+            <div class="benefit-row purple-hover reveal"><div class="benefit-num purple">04</div><div><h5>Priorizas dónde invertir tu presupuesto</h5><p>Con el reporte en mano, sabes exactamente cuáles cambios tienen el mayor retorno y puedes tomar decisiones técnicas con evidencia real.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-box cta-purple reveal">
+            <h2>¿Tu sitio está trabajando a su máximo potencial?</h2>
+            <p>Solicita tu auditoría. En 48 horas tienes un diagnóstico completo con pasos claros a seguir.</p>
+            <div class="cta-box-btns">
+              <button class="btn btn-primary btn-large" onclick="showPage('home'); setTimeout(()=>document.getElementById('contacto').scrollIntoView({behavior:'smooth'}),120)">Solicitar auditoría — $150</button>
+              <button class="btn btn-ghost" onclick="showPage('home')">Ver otros servicios</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div><!-- fin #page-auditoria -->
+
+
+  <!-- FOOTER compartido -->
+  <footer id="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="andexor.jpg" alt="ANDEXOR" class="footer-logo" loading="lazy">
+        <p>Agencia de Inteligencia Artificial.<br>Ilo, Moquegua &mdash; Perú.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links de pie de página">
+        <div class="footer-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><button class="footer-btn" onclick="showPage('frontend')">Desarrollo Frontend</button></li>
+            <li><button class="footer-btn" onclick="showPage('backend')">Desarrollo Backend</button></li>
+            <li><button class="footer-btn" onclick="showPage('auditoria')">Auditorías Digitales</button></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="#proceso">Cómo trabajamos</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#planes">Planes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="mailto:hola@andexor.pe">Email</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ANDEXOR. Todos los derechos reservados. &middot; Ilo, Perú.</p>
+    </div>
+  </footer>
+
+  <div id="toast" role="alert" aria-live="polite" aria-atomic="true"><span id="toast-message"></span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
+  <script src="js/scene.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+  <script src="js/forms.js" defer></script>
+
+</body>
+</html>

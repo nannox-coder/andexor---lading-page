@@ -1,0 +1,166 @@
+:root {
+  /* Colores extraídos del logo ANDEXOR */
+  --bg-primary: #0d1117;
+  --bg-secondary: #131824;
+  --bg-card: rgba(19, 24, 36, 0.85);
+  --bg-card-hover: rgba(22, 29, 44, 0.95);
+
+  /* Dorado */
+  --gold-primary: #d4a843;
+  --gold-light: #f0c866;
+  --gold-dark: #a07830;
+  --gold-glow: rgba(212, 168, 67, 0.25);
+  --gold-border: rgba(212, 168, 67, 0.22);
+
+  /* Teal (montañas del logo) */
+  --teal-primary: #2ab8b0;
+  --teal-light: #3ed9d1;
+  --teal-glow: rgba(42, 184, 176, 0.2);
+
+  /* Texto */
+  --text-primary: #f0f2f5;
+  --text-secondary: #8a9bb5;
+  --text-muted: #5a6b85;
+
+  /* Bordes y superficies */
+  --border-subtle: rgba(212, 168, 67, 0.1);
+  --border-card: rgba(212, 168, 67, 0.15);
+  --glass-bg: rgba(13, 17, 23, 0.7);
+
+  /* Tipografía */
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Espaciado */
+  --gap-xs: 0.5rem;
+  --gap-sm: 1rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 2.5rem;
+  --gap-xl: 4rem;
+  --gap-2xl: 6rem;
+
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Sombras */
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.4), 0 1px 0 rgba(212,168,67,0.08);
+  --shadow-card-hover: 0 8px 40px rgba(0,0,0,0.5), 0 0 20px rgba(212,168,67,0.12);
+  --shadow-gold: 0 0 30px rgba(212,168,67,0.2);
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Blur */
+  --blur-glass: 16px;
+  --blur-heavy: 32px;
+
+  /* Contenedor */
+  --container-max: 1200px;
+  --container-pad: clamp(1.25rem, 5vw, 3rem);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+main, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+.section {
+  padding: var(--gap-2xl) 0;
+}
+
+.section-alt {
+  background: rgba(19, 24, 36, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--gap-xl);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: clamp(0.68rem, 1.4vw, 0.78rem);
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--gap-sm);
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  color: var(--text-primary);
+  margin-bottom: var(--gap-md);
+}
+
+.section-desc {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.text-gold {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-primary), var(--teal-primary));
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+@media (max-width: 900px) {
+  .section { padding: calc(var(--gap-2xl) * 0.7) 0; }
+}
+
+@media (max-width: 500px) {
+  .section { padding: var(--gap-xl) 0; }
+  .section-header { margin-bottom: var(--gap-lg); }
+}
